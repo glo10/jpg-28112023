@@ -57,6 +57,8 @@ Petite explication sur le lien :
 
 - La deuxième partie permet de transformer le résultat reçu du XML en JSON (plus facile à manipuler) des informations que l'on souhaite traiter.
 
+**Il arrive que la première partie du lien ne fonctionne pas et/ou la deuxième partie non plus donc la solution pour que vous puissez récupérer les informations depuis des APIs externe est l'utilisation des plugins cors-anywhere et rss-to-json cf la documentation en début de l'énoncé.**
+
 ## Illustrations
 
 ![cors_ask_auth](./ressources/img/cors.png)
