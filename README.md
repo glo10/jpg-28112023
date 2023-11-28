@@ -10,18 +10,18 @@ Installations ci-dessous à faire uniquement si vous n'avez pas ces outils en lo
 
 ## Plugins Vscode
 
-- Thunder Client
+- **Thunder Client**
 - Prettier Code Formatter
 - IntelliCode
-- Javascript (ES6) Code Snippets
+- **Javascript (ES6) Code Snippets**
 - Babel JavaScript
-- Node.js Extension Pack
+- **Node.js Extension Pack**
 - Node.js Modules Intellisense
 - Node.js Exec
 - Node.js Assertion Snippets
-- Live Server
+- **Live Server**
 - JQuery Code Snippets
-- DevTools for Chrome
+- **DevTools for Chrome**
 
 ---
 
