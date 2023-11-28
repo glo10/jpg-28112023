@@ -1,0 +1,15 @@
+# Exercice 7 : refactoring & code review
+
+---
+
+## Enoncé
+
+1. Faire une refactorisation de votre code dans son intégralité (JS, CSS, HTML, architecture, nommage des classes etc.).
+
+---
+
+## Bonus
+
+Pushez votre travail sur votre dépôt GitHub.
+- En utilisant l'outil `git` ou `degit` ou un export zip via *Teams*, récupérez le code d'un autre collaborateur.
+- Faites une analyse de son code, vous pouvez apporter des modifications, et lui soumettre via l'outil que vous avez sélectionné.

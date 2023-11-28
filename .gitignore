@@ -1,0 +1,15 @@
+cours
+admin
+**/node_modules
+**/dist
+**/cypress/e2e/2-*
+**/cypress/e2e/3-*
+**/cypress/integration
+TODO.md
+demo
+**/favicon
+thunder-client
+**/todo
+1-tp/3-back.md
+**/corrections
+**/bonus
