@@ -10,13 +10,17 @@
 
 ---
 
-## Énonce
+## Scope
+
+Dans un premier temps, traitez la page de connexion avec les événements focus et blur sur les inputs.
+
+## Énoncé
 
 1. Récupérez les sources depuis [les ressources 0-exercices/ressources/front.zip](./ressources/front.zip)
 2. Consultez la vidéo [final.mp4](./ressources/videos/final.mp4) pour avoir une idée du travail à réaliser.
 3. Installez et configurez le module Eslint.
 - Un outil d'analyse statique (sans exécution du code) pour vérifier les erreurs dans son code et s'assurer une meilleure qualité du code grâce à la vérification des bonnes pratiques du langage depuis un fichier de configuration.
-- Vous effectuez la configuration d'ESLINT depuis le terminal et la racine de votre projet, copiez/collez la commande suivante : `npm init @eslint/config` et laissez-vous guider et faites vos choix pour la suite (cf. illustration ci-dessous).
+- Vous effectuez la configuration d'ESLINT depuis le terminal et la racine de votre projet, copiez-collez la commande suivante : `npm init @eslint/config` et laissez-vous guider et faites vos choix pour la suite (cf. illustration ci-dessous).
 3. Créez un formulaire d'inscription et de connexion en reprenant le code contenu dans les fichiers ***html/_partials/sign-up.html*** et ***html/_partials/sign-in.html***.
 
 ---
