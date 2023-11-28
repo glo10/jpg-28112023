@@ -1,0 +1,105 @@
+<h1>Inscription</h1>
+<form autocomplete="off">
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="text"
+      class="form-control"
+      name="lastname"
+      placeholder="Nom"
+      data-format="Au moins 2 caractères, aucun chiffre"
+      value="Tshimini"
+      />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="text"
+      class="form-control"
+      name="firstname"
+      placeholder="Prénom"
+      data-format="Au moins 2 caractères, aucun chiffre"
+      value="Glodie"
+      />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="email"
+      class="form-control"
+      name="email"
+      placeholder="email"
+      data-format="Exemple contact@tshimini.fr, extension maximum 10 caractères"
+      value="contact@tshimini.fr"
+      />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="password"
+      class="form-control"
+      name="password"
+      placeholder="Confirmer le mot de passe"
+      data-format="Entre 15 et 36 caractères (miniscule, majuscule, chiffres et caractères spéciaux &amp; $ + - * / # ~ € % ^ ! - _`)"
+      value="A#12b34567890podjdh"
+      />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="password"
+      class="form-control"
+      name="confirm"
+      placeholder="Confirmer le mot de passe"
+      data-format="Identique au mot de passe saisi précédemment"
+      value="A#12b34567890podjdh"
+      />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="number"
+      class="form-control"
+      name="age"
+      placeholder="Age"
+      data-format="Age compris entre 14 et 130 ans"
+      value="31"
+      />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="text"
+      class="form-control"
+      name="country"
+      placeholder="Pays"
+    />
+  </div>
+  <div class="my-3">
+    <p class="form-help"></p>
+    <input
+      type="text"
+      class="form-control"
+      name="city"
+      placeholder="Ville"
+      disabled
+    />
+  </div>
+  <div>
+    <input type="hidden" name="cityLatitude">
+    <input type="hidden" name="cityLongitude">
+  </div>
+  <div class="my-3 align-right">
+    <input
+      type="submit"
+      value="Valider"
+      class="btn btn-success me-5"
+      data-endpoint="signup"
+    />
+    <input
+      type="button"
+      value="Connexion"
+      class="btn btn-info"
+    />
+  </div>
+</form>
