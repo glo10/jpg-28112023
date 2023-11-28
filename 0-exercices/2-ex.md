@@ -72,6 +72,12 @@ Alors, je devrais voir le contenu textuel (description), l'image et le titre de 
 
 ---
 
+### Illustration de la page d'actualité
+
+![news](./ressources/img/news.png)
+
+---
+
 ## Bonus 1
 
 1. Récupérez en plus des news de france24 ceux des URL suivants et les afficher dans la page de news :
