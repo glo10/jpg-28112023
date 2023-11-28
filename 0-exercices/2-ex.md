@@ -2,6 +2,14 @@
 
 ---
 
+## Ressources
+
+- [Documentation rss-to-json](https://www.npmjs.com/package/rss-to-json)
+
+- [Documentation cors-anywhere](https://www.npmjs.com/package/cors-anywhere)
+
+---
+
 ## Enoncé
 
 1. Créez la page `news.html` en répondant aux scénarios de cas d'utilisation ci-après.
