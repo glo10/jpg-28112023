@@ -1,0 +1,27 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "Advanced JavaScript front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "test-coverage": "vitest run --coverage",
+    "e2e": "cypress open",
+    "proxy": "node 1-ex/src/js/proxy.js",
+    "build": "esbuild 1-ex/src/js/index.js 2-ex/index.js 3-ex/index.js 4-ex/auth-client.js 4-ex/news-client.js 6-ex/index.mjs --outdir=1-ex/dist --bundle --watch"
+  },
+  "author": "Glodie Tshimini",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^0.34.6",
+    "cors-anywhere": "^0.4.4",
+    "cypress": "^13.6.0",
+    "esbuild": "^0.19.7",
+    "file-fetch": "^2.0.0",
+    "jquery": "^3.7.1",
+    "jsdom": "^22.1.0",
+    "rss-to-json": "^2.1.1",
+    "vite": "^5.0.2",
+    "vitest": "^0.34.6"
+  }
+}
