@@ -20,6 +20,12 @@ $(function() {
   }
 
   // utilisation de la fonction
+  /*
+  * Attention pour la callback (fonction de rappel)
+  * Avec la notation fléché () => {}, vous allez perdre le contexte de l'événement
+  *   this va faire référence au contexte globale
+  * Avec function() {} this fait référence directement à l'élément qu'on a séléctionné
+  */
   $('input').on('keyup', function () {
     console.log('check', $(this).check())
   })
