@@ -41,30 +41,43 @@ Alors, je ne devrais pas avoir de message d'erreur lié au format du champ ;
 ## Spécifications techniques du plugin
 
 - Pour chaque type de donnée, créez une fonction spécifique. Par exemple une fonction pour le traitement du mot de passe, une autre pour l'e-mail, prénom etc. Cf les détails ci-après.
-Si vous êtes à l'aise avec les [Expressions régulières (Regex)](https://regexlearn.com/fr/learn/regex101) vous pouvez les utiliser à l'aide de la méthode *[test()](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test)* dans le cas contraire me demander de l'aide.
 
 ### Nom et prénom
 
 - Au moins 2 caractères.
 - Aucun chiffre.
+
+#### Bonus nom et prénom
+
 - Espaces et le tiret du 6 (-) autorisées.
 - `< > & $ + * / # ~ € % ^ ! @` interdites.
+
+---
 
 ### Age
 
 - Compris entre 14 et 130.
+
+---
 
 ### Pays et villes
 
 - Au moins 2 caractères.
 - Chiffres autorisés.
 - Espaces et tirets du 6 (-) autorisés.
+
+#### Bonus 
+
 - `& $ + * / # ~ € % ^ ! _ @` interdites.
+
+---
 
 ### Email
 
 - Les extensions doivent avoir au moins 2 caractères.
 - Les extensions ne doivent pas avoir plus de 10 caractères.
+
+---
 
 ### Mot de passe
 
@@ -73,11 +86,14 @@ Si vous êtes à l'aise avec les [Expressions régulières (Regex)](https://rege
 - Le mot de passe doit avoir au moins une lettre minuscule.
 - Le mot de passe doit avoir au moins une lettre majuscule.
 - Le mot de passe doit avoir au moins un chiffre.
+
+#### Bonus 
+
 - Le mot de passe doit avoir au moins un des caractères suivants  `& $ + - * / # ~ € % ^ ! - _`.
 
 ---
 
-# Bonus 1
+## Bonus
 
 1. Les mots de passes ne doivent pas commencer par la suite des motifs ci-après :
 - 123456 ;

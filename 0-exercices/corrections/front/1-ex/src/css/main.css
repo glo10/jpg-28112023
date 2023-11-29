@@ -504,6 +504,10 @@ article {
   border-bottom: 1px solid #ccc;
 }
 
+article>img {
+  box-shadow: 5px -5px #141414b8;
+}
+
 .modal img {
   display: block;
   margin: .2rem auto;
