@@ -1,0 +1,14 @@
+{
+  "name": "init-node",
+  "version": "1.0.0",
+  "description": "Demo init Node",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app:watch": "node --watch index.mjs",
+    "app": "node  --env-expiramental=.env index.mjs"
+  },
+  "keywords": [],
+  "author": "Glodie Tshmini",
+  "license": "ISC"
+}
