@@ -23,7 +23,12 @@ import jQuery from 'jquery'
   }
 
   $.fn.check = function (e) { // agregateur de toutes les fonctions de vérification précédente
-    const el = $(this).get(0).type ?? $(this).get(0).tagName // on recup type d'input ou son tag
+    /*
+    * on recupère la valeur de l'attribut type d'un input ou le nom de la balise HTML
+    * get(0) permet d'accéder à l'élément, vous pouvez faire un console.log($(this)) pour voir la structure globale
+    * 
+    */
+    const el = $(this).get(0).type ?? $(this).get(0).tagName 
     switch (el.toLowerCase()) {
       case 'option':
         return $(this).checkLocation(e)
@@ -38,5 +43,38 @@ import jQuery from 'jquery'
       default:
         throw new Error('Can\'t check data')
     }
+  }
+
+  $.fn.validation = function () { // gestion des événements et des vérifications
+    $(this).on('keyup change', function (e) { // vérification à chaque lever de la touche du clavier
+      const alertInfo = $(this).parent().find('.alert.alert-info')
+      if (!$(this).check(e)) { // format incorrect
+        const format = $(this).data('format') ?? 'Format incorrect'
+        $(this).css({ 'border-color': 'red' })
+        if (alertInfo.length === 0) { // Création d'un span pour afficher le message d'erreur
+          $(this).parent().append(`<span class="alert alert-info">${format}</span>`)
+          $(this).parent().find('.alert.alert-info')
+            .animate({ bottom: '-10px' }, 'slow')
+        }
+      } else { // format correct
+        $(this).css({ 'border-color': '#ced4da' })
+        alertInfo
+          .fadeOut(2000, () => {
+            $(alertInfo).remove()
+          })
+      }
+    })
+    return $.fn
+  }
+
+  $.fn.fadeOutRemove = () => {
+    $(this).on('blur', function () {
+      const alertInfo = $(this).parent().find('.alert.alert-info')
+      $(alertInfo).parent().find('.alert.alert-info')
+        .fadeOut(3000, () => {
+          $(alertInfo).remove()
+        })
+    })
+    return $.fn
   }
 }(jQuery))
