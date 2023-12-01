@@ -3,12 +3,12 @@ import { writeFile } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { createDir, createFile, getContent } from './files.mjs'
 
-const PORT = 5000
+console.info('App on http://localhost:5000')
 createServer((req, res) => {
   const headers = { 'Content-Type': 'application/json' }
   const usersDir = resolve('12-ex', 'data')
   const usersFile = resolve(usersDir, 'users.json')
-  if (/\/$/.test(req.url) && /post$/i.test(req.method)) {
+  if (/\/signup/.test(req.url) && /post$/i.test(req.method)) {
     let formData = ''
     // Récupération des données envoyées par le client
     req.on('data', async (chunk) => {
@@ -64,6 +64,4 @@ createServer((req, res) => {
     res.writeHead(404, headers)
     res.end('404 not found')
   }
-}).listen(PORT, () => {
-  console.info(`App on http://localhost:${PORT}`)
-})
+}).listen(5000)
