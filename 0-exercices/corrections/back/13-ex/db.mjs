@@ -43,8 +43,7 @@ export default class Db {
   end () { // fermeture de la connexion à la bdd
     this.instance.close((err) => {
       if (err) {
-        console.error('error close database', err)
-        console.info('can\'t close database')
+        console.error('can\'t close database', err)
       } else {
         console.info('database closed')
       }

@@ -4,8 +4,9 @@ import Database from './db.mjs'
 import { jsonToArray } from './utilities.mjs'
 
 const PORT = 6000
-console.info(`server on http://localhost:${PORT}`)
-const http = createServer().listen(PORT) // création d'un serveur web qui écoute sur le port 7000
+const http = createServer().listen(PORT, () => {
+  console.info(`server on http://localhost:${PORT}`)
+}) // création d'un serveur web qui écoute sur le port 6000
 const headers = { 'Content-Type': 'application/json' }
 const dbFile = resolve('13-ex', 'db', 'app.sqlite') // résolution du path pour avoir le chemin de la base de données sqlite embarquée
 const db = new Database(dbFile)
@@ -37,7 +38,7 @@ http.on('request', (req, res) => { // dès qu'un client effectue une req
   }
 })
 
-http.on('signup', async (data, res) => { // à l'écoute de l'événment subscribe
+http.on('signup', async (data, res) => { // à l'écoute de l'événement signup qui porte le même nom que la route
   // connexion à la bdd
   db.connect()
     .then((c) => {
@@ -48,7 +49,7 @@ http.on('signup', async (data, res) => { // à l'écoute de l'événment subscri
         if (/unique/i.test(error)) { // email existe déjà
           http.emit('app_not_found', '{"message":"user already exists"}', res)
         } else if (error) { // tout autre erreur
-          console.info('error insert', error)
+          console.error('error insert', error)
           http.emit('app_not_found', '{"message":"can\'t handle request"}', res)
         } else { // insertion réussi
           http.emit('app_success', '{"message":"success"}', 201, res) // emission de l'événement success
