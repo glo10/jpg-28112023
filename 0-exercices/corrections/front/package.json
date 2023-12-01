@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "test-coverage": "vitest run --coverage",
+    "test:cov": "vitest run --coverage",
     "e2e": "cypress open",
     "proxy": "node 1-ex/src/js/proxy.js",
     "build": "esbuild 1-ex/src/js/index.js 2-ex/index.js 3-ex/index.js 4-ex/auth-client.js 4-ex/news-client.js 6-ex/index.mjs --outdir=1-ex/dist --bundle --watch"

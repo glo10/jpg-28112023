@@ -45,7 +45,7 @@ http.on('signup', async (data, res) => { // à l'écoute de l'événement signup
       // la méthode run ci-après attend un tableau en 2ème paramètre
       const user = jsonToArray(data)
       // cherche à insérer un user dans la bdd
-      c.instance.run(db.requests.insert, user, (error) => {
+      c.instanceSqlite.run(db.requests.insert, user, (error) => {
         if (/unique/i.test(error)) { // email existe déjà
           http.emit('app_not_found', '{"message":"user already exists"}', res)
         } else if (error) { // tout autre erreur
@@ -63,7 +63,7 @@ http.on('signin', (data, res) => {
   // connexion à la bdd
   db.connect()
     .then((c) => {
-      c.instance.get(db.requests.select, user, (err, row) => {
+      c.instanceSqlite.get(db.requests.select, user, (err, row) => {
         if (err) {
           console.error('error sign in', err)
           http.emit('app_not_found', '{"message":"email or password incorrect"}', res)

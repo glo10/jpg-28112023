@@ -41,5 +41,5 @@ class User {
   }
 }
 
-const userclass = new User('Glodie', 'Tshimini', 32)
-userclass.getUser()
+const userclass: User = new User('Glodie', 'Tshimini', 32)
+const username: string = userclass.getUser()

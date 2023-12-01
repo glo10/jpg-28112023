@@ -2,7 +2,7 @@ import sqlite3 from 'sqlite3'
 import { readFile } from 'node:fs/promises'
 import reqs from './database/requests.mjs'
 export default class Db {
-  instance
+  instanceSqlite
 
   constructor (filename) {
     this.filename = filename
@@ -17,7 +17,7 @@ export default class Db {
       console.info('database found')
     })
       .then(() => { // Connexion Ok, on stocke l'objet dans une propriété pour pouvoir facilement l'utiliser pour toutes nos ops
-        this.instance = new sqlite3.Database(this.filename, sqlite3.OPEN_READWRITE)
+        this.instanceSqlite = new sqlite3.Database(this.filename, sqlite3.OPEN_READWRITE)
         this.createTable() // création de la table
         console.info('database connected and table created')
         return this
@@ -29,19 +29,19 @@ export default class Db {
 
   createTable () {
     // On tente de récupérer la table (vérifier si elle existe)
-    this.instance.get(this.requests.isTableExist, (err, row) => {
+    this.instanceSqlite.get(this.requests.isTableExist, (err, row) => {
       if (err) { // Erreur au niveau de la base de données
         console.error('error', err)
         throw err // on propage cette erreur pour la traiter plus tard
       }
       if (!row) { // Pas d'erreur au niveau de la bdd et la table n'existe pas.
-        this.instance.run(this.requests.create) // donc création de la table
+        this.instanceSqlite.run(this.requests.create) // donc création de la table
       }
     })
   }
 
   end () { // fermeture de la connexion à la bdd
-    this.instance.close((err) => {
+    this.instanceSqlite.close((err) => {
       if (err) {
         console.error('can\'t close database', err)
       } else {

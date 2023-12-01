@@ -1,3 +1,7 @@
+# SOON
+
+**Les corrections avec le code optimisé et refactorisé pour le front et le back ainsi que le reste des tests unitaires que je dois revoir seront envoyés plus tard**
+
 # Installations
 
 Installations ci-dessous à faire uniquement si vous n'avez pas ces outils en local sur vos postes.
