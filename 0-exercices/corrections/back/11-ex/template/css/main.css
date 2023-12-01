@@ -1,0 +1,207 @@
+h1,
+h2,
+h3 {
+  text-align: center;
+  margin: .2rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(6, 100px);
+  justify-content: center;
+}
+
+header {
+  grid-column: 1 / -1;
+}
+
+.container div {
+  border-top: none;
+  text-align: center;
+  line-height: 100px;
+  height: 100px;
+  box-shadow: 2px 2px 2px #141414;
+  text-transform: capitalize;
+}
+
+.container div:nth-of-type(3) {
+  grid-area: 6 / 2 / 7 / 11;
+  background-color: #db4414;
+}
+
+.container div:nth-of-type(2) {
+  grid-area: 5 / 3 / 6 / 10;
+  background-color: #7840db;
+}
+
+.container div:nth-of-type(1) {
+  grid-area: 4 / 4 / 5 / 9;
+  background-color: #dbd21f;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+.team {
+  grid-row-start: 7;
+  box-shadow: none!important;
+}
+
+.team:hover {
+  animation-play-state: paused;
+}
+
+#wales {
+  grid-column-start: 2;
+}
+
+#argentina {
+  grid-column-start: 3;
+  animation: argentina 5s linear 3s 1 forwards;
+}
+
+#ireland {
+  grid-column-start: 4;
+}
+
+#new-zealand {
+  grid-column-start: 5;
+  animation: newZealand 7s linear 3s 1 forwards;
+}
+
+#trophy {
+  grid-column-start: 6;
+  transform: translate(0,-375px) scale(1.5);
+  transition: transform 3s .5s ease-in-out;
+}
+
+#england {
+  grid-column-start: 7;
+  animation: england 5s linear 3s 1 forwards;
+}
+
+#fiji {
+  grid-column-start: 8;
+}
+
+#france {
+  grid-column-start: 9;
+}
+
+#south-africa {
+  /* name duration timing-fn delay iteration count direction fill-mode play-state */
+  grid-column-start: 10;
+  animation: southAfrica 5s linear 3s 1 forwards;
+}
+
+@keyframes southAfrica {
+  0% {
+    transform: translate(0, -75px);
+  }
+
+  25% {
+    transform: translate(-125px, -175px);
+  }
+
+  50% {
+    transform: translate(-325x, -275px);
+  }
+
+  75% {
+    transform: translate(-350px, -275px);
+  }
+
+  100% {
+    transform: translate(-375px, -375px) scale(1.5);
+  }
+}
+
+#france,
+#fiji,
+#ireland,
+#wales {
+  animation: looser .5s linear 3s forwards;
+}
+
+@keyframes looser {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: .5;
+    transform: translate(0,-75px);
+  }
+}
+
+@keyframes newZealand {
+  0% {
+    transform: translate(0, -75px);
+  }
+
+  25% {
+    transform: translate(0, -175px);
+  }
+
+  50% {
+    transform: translate(0, -275px);
+  }
+
+  75% {
+    transform: translate(0, -275px);
+  }
+
+  100% {
+    transform: translate(0, -275px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes england {
+  0% {
+    transform: translate(0, -75px);
+  }
+
+  25% {
+    transform: translate(0, -175px);
+  }
+
+  50% {
+    transform: translate(0, -175px);
+  }
+
+  75% {
+    transform: translate(0, -175px);
+  }
+
+  100% {
+    transform: translate(0, -175px);
+    opacity: .5;
+  }
+}
+
+@keyframes argentina {
+  0% {
+    transform: translate(0, -75px);
+  }
+
+  25% {
+    transform: translate(0, -175px);
+  }
+
+  50% {
+    transform: translate(125px, -175px);
+  }
+  
+  75% {
+    transform: translate(125px, -175px);
+  }
+  
+  100% {
+    opacity: 0.5;
+    transform: translate(125px, -175px);
+  }
+}
